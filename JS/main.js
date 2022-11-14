@@ -1,4 +1,5 @@
 const listaNumeriCasuali = document.getElementById("lista");
+const risposta = document.getElementById("risposta")
 let listaNumeriCorretti = [];
 const timer = setTimeout( startGame, 1000*30);
 

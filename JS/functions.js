@@ -3,10 +3,10 @@ function startGame() {
 }
 
 function askNumbers() {
-    
+
     let numeriSelezionati = [];
     let numeriIndovinati = [];
-    let quantitaNumeriIndovinati = [];
+    let quantitaNumeriIndovinati = 0;
 
     for (let a = 1; a <= 5; a++){
         const numeroSelezionato = prompt("Metti un numero")
@@ -14,13 +14,16 @@ function askNumbers() {
 
         if (listaNumeriCorretti.includes(parseInt(numeroSelezionato))){
             numeriIndovinati.push(numeroSelezionato);
-            console.log(numeriIndovinati)
-        } else {
+            quantitaNumeriIndovinati += 1;
+            for (let b = 0; b < listaNumeriCorretti.length; b++){
+                if (numeroSelezionato == listaNumeriCorretti[b]){
+                    listaNumeriCorretti.splice(b, b+1)
+                }
+            }
         }
     }
-    console.log(listaNumeriCorretti)
-    console.log(numeriIndovinati)
-    console.log(numeriSelezionati)
 
-    return true
+    const risultato = `Hai indovinato ${quantitaNumeriIndovinati} su 5, ovvero ${numeriIndovinati}.`
+    risposta.innerHTML = risultato
+    
 }

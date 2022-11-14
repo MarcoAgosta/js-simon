@@ -23,7 +23,13 @@ function askNumbers() {
         }
     }
 
-    const risultato = `Hai indovinato ${quantitaNumeriIndovinati} su 5, ovvero ${numeriIndovinati}.`
+    let risultato =""
+
+    if (quantitaNumeriIndovinati == 0){
+        risultato = "Mi spiace ma non hai indovinato neanche un numero."
+    } else {
+        risultato = `Hai indovinato ${quantitaNumeriIndovinati} su 5, ovvero i/il numero/i: ${numeriIndovinati}.`
+    }
     risposta.innerHTML = risultato
     
 }

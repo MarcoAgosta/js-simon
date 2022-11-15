@@ -14,5 +14,5 @@ for (let i = 1; i <= 5; i++){
     listaNumeriCorretti.push(randomNumber);
     }
 }
-
+console.log(listaNumeriCorretti)
 const timerSecondo = setTimeout( askNumbers, 1000*31)

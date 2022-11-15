@@ -17,7 +17,8 @@ function askNumbers() {
             quantitaNumeriIndovinati += 1;
             for (let b = 0; b < listaNumeriCorretti.length; b++){
                 if (numeroSelezionato == listaNumeriCorretti[b]){
-                    listaNumeriCorretti.splice(b, b+1)
+                    listaNumeriCorretti.splice(b, 1)
+                    console.log(listaNumeriCorretti)
                 }
             }
         }
@@ -28,7 +29,7 @@ function askNumbers() {
     if (quantitaNumeriIndovinati == 0){
         risultato = "Mi spiace ma non hai indovinato neanche un numero."
     } else {
-        risultato = `Hai indovinato ${quantitaNumeriIndovinati} su 5, ovvero i/il numero/i: ${numeriIndovinati}.`
+        risultato = `Hai indovinato ${quantitaNumeriIndovinati} su 5, ovvero i/il numeri/o: ${numeriIndovinati}.`
     }
     risposta.innerHTML = risultato
     
